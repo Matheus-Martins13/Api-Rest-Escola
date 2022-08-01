@@ -21,10 +21,10 @@ class TokenController {
         });
       }
 
-      if(!(await user.passwordIsValid(password))){
+      if (!(await user.passwordIsValid(password))) {
         return res.status(401).json({
           errors: ['Senha inválida'],
-        })
+        });
       }
 
       const { id } = user;
